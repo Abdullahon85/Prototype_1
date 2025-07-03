@@ -107,6 +107,7 @@ $transition-speed: 0.3s;
   .nav__box {
     flex-direction: column;
     align-items: flex-start;
+    align-items: end;
   }
 }
 
@@ -462,7 +463,7 @@ $transition-speed: 0.3s;
   border-radius: 8px;
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 620px) {
   .products {
     padding: 6rem 0.5rem 2rem;
 
@@ -490,8 +491,11 @@ $transition-speed: 0.3s;
 
     &__box {
       gap: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 5fr));
 
       &-item {
+        
         &-img {
           height: 140px;
         }

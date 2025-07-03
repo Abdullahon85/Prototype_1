@@ -22,13 +22,13 @@ const discountedPrice = computed(() =>
 </script>
 
 <template>
-  <div class="products__box-item">
+  <div v-if="product.stock > 0" class="products__box-item">
     <!-- изображение и текст -->
     <div class="products__box-item-imgBox">
       <img :src="product.thumbnail" class="products__box-item-img" />
       <h3 class="products__box-item-text-title">{{ product.title }}</h3>
     </div>
-    <div class="products__box-item-text">
+    <div  class="products__box-item-text">
       <p>{{ product.brand }}</p>
       <p>Кол-во: {{ product.stock }}</p>
       <p>Цена: {{ product.price }} Сум</p>

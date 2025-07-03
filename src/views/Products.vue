@@ -3,7 +3,7 @@
         <div class="container">
             <div class="top"></div>
             <h2 class="products__sort-title">Товары</h2>
-          <Cart/>
+
             <div class="products__pagination">
                 <button class="products__pagination-btn" @click="prevPage()" :disabled="currentPage === 1">Назад</button>
                 <ul class="products__pagination-list сort" v-if="totalPages">
@@ -19,7 +19,6 @@
                 </ul>
                 <button class="products__pagination-btn" @click="nextPage()" :disabled="currentPage === totalPages">Вперед</button>
             </div>
-            <Cart/>
             <div class="products__sort">
                 <div class="products__sort-box">
                     <span>Сортировка</span>
@@ -71,7 +70,7 @@ import { ref, computed, watch, onMounted } from 'vue'
 import _debounce from 'lodash/debounce'
 import ProductCard from '@/components/Cards.vue'
 import { productsStore } from '@/stores/productsStore'
-import Cart from '../views/Cart.vue'
+
 
 const store = productsStore()
 
@@ -140,6 +139,7 @@ const nextPage = () => {
 const goToPage = (page) => {
   currentPage.value = page
 }
+
 
 
 </script>
